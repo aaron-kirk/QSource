@@ -10,33 +10,34 @@
 
 	<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
 	<link href="https://fonts.googleapis.com/css?family=Muli:200,200i,400,400i,600,600i&display=swap" rel="stylesheet">
+ 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 
 	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-<body>
+<body class="bg-grey">
 	<header>
-		<nav class="navbar navbar-dark bg-primary fixed-top" role="navigation">
-			<a href="index.html" class="navbar-brand ubuntu p-2" style="margin-left:3vw"><b>QSource</b></a>
+		<nav class="navbar navbar-dark bg-primary fixed-top d-none d-md-flex" role="navigation">
+			<a href="index.html" class="navbar-brand ubuntu p-2 animated fadeInLeft" style="margin-left:3vw"><b>QSource</b></a>
 		</nav>
 	</header>
 
 	<main role="main">
 		<div class="container-fluid bg-grey" style="margin-top: 62px; height: calc(100vh - 118px); width: 100vw;">
-			<div class="col-3 bg-dark page-center">
+			<div class="col bg-dark page-center" style="width:480px">
 				<div class="row bg-primary justify-content-center" style="padding-top:1.5vh; padding-bottom:1.5vh">
-					<h1 class="h1 text-white ubuntu text-center"><b>QSource</b><br><span class="muli-i text-white-50" style="font-size:1.1vw">Lorem Ipsum Dolor Sit Amet</span></h1>
+					<h1 class="h1 text-white ubuntu text-center"><b class="animated">QSource</b><br><span class="muli-i text-white-50 animated fadeIn" style="font-size:1.3rem">Lorem Ipsum Dolor Sit Amet</span></h1>
 				</div>
 				<div class="row justify-content-center">
 					<a href="register.html" class="btn btn-lg btn-primary" style="width:90%; margin-top:5vh; margin-bottom:2.5vh; padding-top:1rem; padding-bottom:1rem">Get Started</a>
 				</div>
 				<div class="row justify-content-center">
-					<button type="button" class="btn btn-lg btn-light" style="width:90%; margin-top:2.5vh; margin-bottom:5vh; padding-top:1rem; padding-bottom:1rem">Login</button>
+					<a href="login.html" class="btn btn-lg btn-light" style="width:90%; margin-top:2.5vh; margin-bottom:5vh; padding-top:1rem; padding-bottom:1rem">Login</a>
 				</div>
 			</div>
 		</div>
 	</main>
 
-	<footer class="footer font-small bg-primary">
+	<footer class="footer font-small bg-primary d-none d-md-block">
 		<div class="text-white-50 text-center py-3">
 			Developed by ethanf108 and littlebro5
 		</div>
