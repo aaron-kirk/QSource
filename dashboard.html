@@ -16,9 +16,21 @@
 </head>
 <body class="bg-grey">
 	<header>
-		<nav class="navbar navbar-dark bg-primary fixed-top d-none d-md-flex" role="navigation">
+		<nav class="navbar navbar-dark navbar-expand-md bg-primary fixed-top d-none d-md-flex" role="navigation">
 			<a href="dashboard.html" class="navbar-brand ubuntu p-2" style="margin-left:3vw"><b>QSource</b></a>
-			<a href="index.html" class="btn btn-outline-light ml-auto animated fadeInRight" style="margin-right:0.5vw">Log out</a>
+			<div class="ml-auto">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link mr-4 active" href="dashboard.html">Dashboard</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link mr-4" href="settings.html">Settings</a>
+					</li>
+					<li>
+						<a href="index.html" class="btn btn-outline-light" style="margin-right:0.5vw">Log out</a>
+					</li>
+				</ul>
+			</div>
 		</nav>
 	</header>
 
