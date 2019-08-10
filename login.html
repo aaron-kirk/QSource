@@ -15,6 +15,10 @@
 	<link rel="stylesheet" type="text/css" href="styles.css">
 
 	<script>
+		$(document).ready(function(){
+    		$('[data-toggle="popover"]').popover();   
+		});
+
 		function next() {
 			document.getElementById("emailField").style.display="none";
 			document.getElementById("nextButton").style.display="none";
@@ -42,15 +46,21 @@
 					<input type="email" id="emailField" class="form-control btn-lg animated fadeInRight faster" placeholder="E-Mail" style="width:90%; margin-top:5vh; margin-bottom:2.5vh; padding-top:1.95rem; padding-bottom:1.95rem">
 				</div>
 				<div class="row justify-content-center">
-					<input type="password" id="passwordField" class="form-control btn-lg animated fadeInRight faster" placeholder="Password" style="display:none; width:90%; margin-top:5vh; margin-bottom:2.5vh; padding-top:1.95rem; padding-bottom:1.95rem">
+					<input type="password" id="passwordField" class="form-control btn-lg animated fadeIn faster" placeholder="Password" style="display:none; width:90%; margin-top:5vh; margin-bottom:2.5vh; padding-top:1.95rem; padding-bottom:1.95rem">
 				</div>
 				<div class="row justify-content-center">
 					<button type="button" onclick="next()" id="nextButton" class="btn btn-lg btn-light" style="width:90%; margin-top:2.5vh; margin-bottom:5vh; padding-top:1rem; padding-bottom:1rem"><span class="animated fadeIn">Next</span></button>
 				</div>
 				<div class="row justify-content-center">
-					<button type="submit" id="loginButton" class="btn btn-lg btn-light" style="width:90%; margin-top:2.5vh; margin-bottom:5vh; padding-top:1rem; padding-bottom:1rem; display:none"><span class="animated fadeIn">Login</span></button>
+					<button type="submit" id="loginButton" class="btn btn-lg btn-primary" style="width:90%; margin-top:2.5vh; margin-bottom:5vh; padding-top:1rem; padding-bottom:1rem; display:none"><span class="animated fadeIn">Login</span></button>
 				</div>
 			</div>
+		</div>
+		<div class="alert alert-danger alert-dismissible fade show animated fadeIn" style="position:fixed; width:300px; bottom:0; right:15px; " role="alert">
+ 			<strong>Watch out!</strong><br> Your email and password combination isn't valid!
+  			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+   				<span aria-hidden="true">&times;</span>
+  			</button>
 		</div>
 	</main>
 
