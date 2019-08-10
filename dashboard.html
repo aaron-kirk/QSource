@@ -36,7 +36,21 @@
 
 	<main role="main">
 		<div class="container-fluid bg-grey" style="margin-top: 62px; height: calc(100vh - 118px); width: 100vw;">
-			
+			<div class="row">
+				<div class="col-3 offset-3">
+					<button class="btn btn-primary multi-collapse" data-toggle="collapse" data-target=".multi-collapse" type="button">Create Queue</button>
+				</div>
+				<form class="form-inline collapse multi-collapse">
+					<input type="text" placeholder="Queue Name" class="form-control">
+					<button class="btn btn-warning" type="button" data-toggle="collapse" data-target=".multi-collapse">Cancel</button>
+				</form>
+				<div class="col-3">
+					<form class="form-inline">
+						<input type="text" placeholder="Join Code" class="mr-1 form-control">
+						<input type="submit" value="Join Queue" class="ml-1 btn btn-primary">
+					</form>
+				</div>
+			</div>
 		</div>
 	</main>
 
