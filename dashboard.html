@@ -10,47 +10,25 @@
 
 	<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
 	<link href="https://fonts.googleapis.com/css?family=Muli:200,200i,400,400i,600,600i&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+ 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 
 	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-<body>
+<body class="bg-grey">
 	<header>
-		<nav class="navbar navbar-expand-md bg-primary fixed-top" role="navigation">
-			<a href="index.html" class="navbar-brand p-2">QSource</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-
-			<div class="collapse navbar-nav navbar-collapse ml-auto" id="navbarSupportedContent">
-				<div class="nav-item dropdown mr-4 d-none d-md-inline">
-					<button class="btn dropdown-toggle text-white" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						Event 1
-					</button>
-					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-						<a class="dropdown-item active" href="?event=1">Event 1</a>
-						<a class="dropdown-item" href="?event=2">Event 2</a>
-						<a class="dropdown-item" href="?event=3">Event 3</a>
-						<a class="dropdown-item" href="?event=4">Event 4</a>
-					</div>
-				</div>
-				<a class="nav-item btn btn-outline-light mr-3 mb-1" role="button" href="?logout=1">Logout</a> 
-			</div>
+		<nav class="navbar navbar-dark bg-primary fixed-top d-none d-md-flex" role="navigation">
+			<a href="dashboard.html" class="navbar-brand ubuntu p-2" style="margin-left:3vw"><b>QSource</b></a>
+			<a href="index.html" class="btn btn-outline-light ml-auto animated fadeInRight" style="margin-right:0.5vw">Log out</a>
 		</nav>
 	</header>
 
 	<main role="main">
-		<div class="container-fluid bg-dark m-nav-compensate">
-			<div class="row d-block" style="position: relative;">
-				<img class="img-fluid" style="width:100%" src="resources/field render.png">
-				<div class="display-1 text-white text-image-center">
-					ScoutMe.me
-				</div>
-			</div>
+		<div class="container-fluid bg-grey" style="margin-top: 62px; height: calc(100vh - 118px); width: 100vw;">
+			
 		</div>
 	</main>
 
-	<footer class="footer font-small bg-primary">
+	<footer class="footer font-small bg-primary d-none d-md-block">
 		<div class="text-white-50 text-center py-3">
 			Developed by ethanf108 and littlebro5
 		</div>
