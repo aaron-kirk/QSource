@@ -23,12 +23,13 @@
 				}
 			};
 			xhttp.open("POST", "http://192.168.0.28:8090/user/login", true);
-			xhttp.setRequestHeader("Content-type","text/json;");
+			xhttp.setRequestHeader("Content-type","application/json;charset=UTF-8");
+			// xhttp.setRequestHeader("Access-Control-Allow-Origin","text/json;charset=UTF-8");
 			var body = {
-				email: "ethanf108@gmail.com",
-				password: "testest"
+				"email": "ethanf108@gmail.com",
+				"password": "testest"
 			}
-			xhttp.send(body);
+			xhttp.send("{\"email\": \"ethanf108@gmail.com\",\"password\": \"testest\"}");
 		}
 	</script>
 </head>
