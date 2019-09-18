@@ -13,25 +13,6 @@
  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 
 	<link rel="stylesheet" type="text/css" href="styles.css">
-
-	<script type="text/javascript">
-		function login() {
-			var xhttp = new XMLHttpRequest();
-			xhttp.onreadystatechange = function() {
-				if (this.readyState == 4 && this.status == 200) {
-					document.getElementById("demo").innerHTML = "guud lawgen";
-				}
-			};
-			xhttp.open("POST", "http://192.168.0.28:8090/user/login", true);
-			xhttp.setRequestHeader("Content-type","application/json;charset=UTF-8");
-			// xhttp.setRequestHeader("Access-Control-Allow-Origin","text/json;charset=UTF-8");
-			var body = {
-				"email": "ethanf108@gmail.com",
-				"password": "testest"
-			}
-			xhttp.send("{\"email\": \"ethanf108@gmail.com\",\"password\": \"testest\"}");
-		}
-	</script>
 </head>
 <body class="bg-grey">
 	<header>
@@ -39,9 +20,6 @@
 			<a href="index.html" class="navbar-brand ubuntu p-2 animated fadeInLeft" style="margin-left:3vw"><b>QSource</b></a>
 		</nav>
 	</header>
-
-	<p id="demo"></p>
-	<a href="#" onclick="login()">click to kill negro</a>
 
 	<main role="main">
 		<div class="container-fluid bg-grey" style="margin-top: 62px; height: calc(100vh - 118px); width: 100vw;">

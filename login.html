@@ -14,13 +14,31 @@
 
 	<link rel="stylesheet" type="text/css" href="styles.css">
 
-	<script>
+	<script type="text/javascript">
 		function next() {
 			document.getElementById("emailField").style.display="none";
 			document.getElementById("nextButton").style.display="none";
 			document.getElementById("passwordField").style.display="block";
 			document.getElementById("loginButton").style.display="block";
 		}
+
+		function login() {
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					document.getElementById("demo").innerHTML = "guud lawgen";
+				}
+			};
+			xhttp.open("POST", "http://192.168.0.28:8090/user/login", true);
+			xhttp.setRequestHeader("Content-type","application/json;charset=UTF-8");
+			// xhttp.setRequestHeader("Access-Control-Allow-Origin","text/json;charset=UTF-8");
+			var body = {
+				email: document.getElementById("emailField").value,
+				password: document.getElementById("passwordField").value,
+			};
+			xhttp.send(JSON.stringify(body));
+		}
+
 	</script>
 
 </head>
@@ -50,7 +68,7 @@
 					</div>
 					<div class="row justify-content-center">
 					<!--	<button type="submit" id="loginButton" class="btn btn-lg btn-primary" style="width:90%; margin-top:2.5vh; margin-bottom:5vh; padding-top:1rem; padding-bottom:1rem; display:none"><span class="animated fadeIn">Login</span></button>-->
-						<a href="dashboard.html" id="loginButton" class="btn btn-lg btn-primary" style="width:90%; margin-top:2.5vh; margin-bottom:5vh; padding-top:1rem; padding-bottom:1rem; display:none"><span class="animated fadeIn">Login</span></a>
+						<a href="dashboard.html" id="loginButton" onclick="login()" class="btn btn-lg btn-primary" style="width:90%; margin-top:2.5vh; margin-bottom:5vh; padding-top:1rem; padding-bottom:1rem; display:none"><span class="animated fadeIn">Login</span></a>
 					</div>
 				</form>
 			</div>
