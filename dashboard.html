@@ -13,6 +13,56 @@
  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 
 	<link rel="stylesheet" type="text/css" href="styles.css">
+
+	<script>
+		var clickedCreateQueue = 0;
+
+		function createQueue() {
+			window.location.href = "queue.html";
+		}
+
+		// function createQueue()() {
+		// 	var xhttp = new XMLHttpRequest();
+		// 	xhttp.onreadystatechange = function() {
+		// 		if (this.readyState == 4 && this.status == 200) {
+		// 			document.getElementById("demo").innerHTML = "guud lawgen";
+		// 		}
+		// 	};
+		// 	xhttp.open("POST", "http://192.168.0.28:8090/user/login", true);
+		// 	xhttp.setRequestHeader("Content-type","application/json;charset=UTF-8");
+		// 	// xhttp.setRequestHeader("Access-Control-Allow-Origin","text/json;charset=UTF-8");
+		// 	var body = {
+		// 		queue: document.getElementById("queueField").value
+		// 	};
+		// 	xhttp.send(JSON.stringify(body));
+		// }
+
+		function joinQueue() {
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					document.getElementById("demo").innerHTML = "guud lawgen";
+				}
+			};
+			xhttp.open("POST", "http://192.168.0.28:8090/user/login", true);
+			xhttp.setRequestHeader("Content-type","application/json;charset=UTF-8");
+			// xhttp.setRequestHeader("Access-Control-Allow-Origin","text/json;charset=UTF-8");
+			var body = {
+				queue: document.getElementById("joinField").value
+			};
+			xhttp.send(JSON.stringify(body));
+		}
+
+		function createQueueButton() {
+			if(clickedCreateQueue == 0) {
+				$('.multiCollapse').collapse()
+			} else if(clickedCreateQueue ==1) {
+				createQueue();
+			}
+
+			clickedCreateQueue++;
+		}
+	</script>
 </head>
 <body class="bg-grey">
 	<header>
@@ -36,17 +86,19 @@
 
 	<main role="main">
 		<div class="container-fluid bg-grey" style="margin-top: 62px; height: calc(100vh - 118px); width: 100vw;">
+			<div class="row py-3">
+			</div>
 			<div class="row">
 				<div class="col-3 offset-3">
-					<button class="btn btn-primary multi-collapse" data-toggle="collapse" data-target=".multi-collapse" type="button">Create Queue</button>
+					<button class="btn btn-primary" data-toggle="collapse" data-target=".multiCollapse" onclick="createQueueButton()" type="button">Create Queue</button>
 				</div>
-				<form class="form-inline collapse multi-collapse">
-					<input type="text" placeholder="Queue Name" class="form-control">
-					<button class="btn btn-warning" type="button" data-toggle="collapse" data-target=".multi-collapse">Cancel</button>
+				<form class="form-inline collapse multiCollapse">
+					<input type="text" id="queueField" placeholder="Queue Name" class="form-control">
+					<button class="btn btn-warning" type="button" onclick="clickedCreateQueue=0;" data-toggle="collapse" data-target=".multiCollapse">Cancel</button>
 				</form>
 				<div class="col-3">
 					<form class="form-inline">
-						<input type="text" placeholder="Join Code" class="mr-1 form-control">
+						<input type="text" id="joinField" placeholder="Join Code" class="mr-1 form-control">
 						<input type="submit" value="Join Queue" class="ml-1 btn btn-primary">
 					</form>
 				</div>
